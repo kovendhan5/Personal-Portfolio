@@ -332,8 +332,10 @@ main {
 }
 
 .avatar-box {
-  background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  border-radius: 50%;
+  width: 120px; /* Adjust the size as needed */
+  height: 120px;
+  object-fit: cover;
 }
 
 .info-content .name {
@@ -440,7 +442,7 @@ main {
 
 .social-item .social-link {
   color: var(--light-gray-70);
-  font-size: 18px;
+  font-size: 38px;
 }
 
 
