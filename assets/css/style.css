@@ -1232,6 +1232,94 @@ textarea.form-input::-webkit-resizer { display: none; }
 /**
  * responsive larger than 450px screen
  */
+ /* Updated CSS to ensure social links are visible on mobile devices */
+
+@media only screen and (max-width: 345px) {
+  .sidebar {
+    width: 100%;
+    max-height: none; /* Ensure sidebar takes full height */
+    overflow-y: auto; /* Allow scrolling for long content */
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--eerie-black-2);
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .sidebar-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  .avatar-box {
+    margin-bottom: 15px;
+  }
+
+  .info-content .name {
+    font-size: var(--fs-4);
+  }
+
+  .info-content .title {
+    font-size: var(--fs-6);
+    padding: 5px 10px;
+    margin-bottom: 10px;
+  }
+
+  .info_more-btn {
+    font-size: var(--fs-7);
+    padding: 8px 12px;
+  }
+
+  .contacts-list {
+    padding: 0;
+    margin-top: 15px;
+  }
+
+  .contact-item {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .social-list {
+    display: flex; /* Ensure social icons are displayed in a row */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    justify-content: center;
+    padding-top: 10px;
+    margin-top: 15px;
+  }
+
+  .social-item {
+    margin: 5px; /* Add spacing between icons */
+    list-style: none; /* Remove default list styling */
+  }
+
+  .social-link {
+    font-size: 24px; /* Ensure icons are visible */
+    color: var(--orange-yellow-crayola);
+    transition: color 0.3s ease;
+  }
+
+  .social-link:hover {
+    color: var(--baby-powder); /* Change color on hover for better UX */
+  }
+
+  /* Ensure the sidebar is scrollable on small screens */
+  .sidebar-info_more {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+}
+
 
 @media (min-width: 450px) {
 
