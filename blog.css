@@ -27,19 +27,35 @@
   background: var(--eerie-black-2);
   padding: 20px;
   border-radius: 14px;
-  max-width: 70%; /* Reduce width */
-  width: 70%;
+  max-width: 90%; /* Reduce width */
+  width: 90%;
   max-height: 90%;
   overflow-y: auto;
   box-shadow: var(--shadow-5);
   transform: scale(1.2);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  position: relative; /* Added for positioning the close button */
 }
 
 .modal-container1.active .blog-modal {
   transform: scale(1);
   opacity: 1;
+}
+
+/* Close Button Styling */
+.blog-modal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* Move the close button to the left */
+  font-size: 34px;
+  color: white;
+  cursor: pointer;
+  background:transparent;
+  border: none;
+  outline: none;
+  z-index: 100;
+  padding: 0;
 }
 
 .modal-img-wrapper1 {
@@ -72,24 +88,23 @@
   border-radius: 14px; /* Add border radius */
 }
 
-.modal-contents p {
-  margin: 0;
-  padding: 0;
+/* Styled Scrollbar */
+.modal-contents::-webkit-scrollbar {
+  width: 8px; /* Set scrollbar width */
 }
 
-.modal-contents.has-scrollbar::-webkit-scrollbar {
-  width: 5px; /* for vertical scrollbar */
-  height: 5px; /* for horizontal scrollbar */
-}
-
-.modal-contents.has-scrollbar::-webkit-scrollbar-track {
-  background: var(--onyx);
+.modal-contents::-webkit-scrollbar-track {
+  background: rgba(240, 232, 232, 0.1); /* Light black background for scrollbar track */
   border-radius: 5px;
 }
 
-.modal-contents.has-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--orange-yellow-crayola);
+.modal-contents::-webkit-scrollbar-thumb {
+  background: rgba(219, 226, 225, 0.3); /* Light black for scrollbar thumb */
   border-radius: 5px;
+}
+
+.modal-contents::-webkit-scrollbar-thumb:hover {
+  background: rgba(106, 102, 102, 0.5); /* Slightly darker on hover */
 }
 
 .modal-contents.has-scrollbar::-webkit-scrollbar-button {
@@ -127,4 +142,97 @@
   content: attr(data-title);
   color: white; /* Set the color to white */
 }
+
+/* CSS for Blog Item Container */
+.blog-item {
+  display: block;
+  overflow: hidden; /* Prevent scrollbars due to overflow */
+  max-width: 100%;
+  box-sizing: border-box; /* Include padding and borders in width and height calculations */
+}
+
+/* CSS for Image */
+.blog-banner-box img,
+.modal-img-wrapper1 img {
+  max-width: 100%; /* Ensure image does not exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove inline spacing caused by images being inline-block */
+  object-fit: cover; /* Ensure image covers its container without stretching */
+}
+
+/* CSS for Modal Content */
+.modal-contents {
+  max-width: 100%; /* Ensure content does not exceed container width */
+  overflow: auto; /* Allow scrolling for modal content if needed */
+  box-sizing: border-box;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+  /* Adjust blog modal for smaller screens */
+  .blog-modal {
+    width: 90%; /* Increase width for mobile */
+    max-width: 90%;
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  /* Reduce font sizes for mobile */
+  .modal-title1 {
+    font-size: 18px; /* Smaller title font size */
+  }
+
+  .modal-contents {
+    font-size: 14px; /* Smaller content font size */
+    line-height: 1.4; /* Adjust line height for better readability */
+  }
+
+  .social-link {
+    font-size: 20px; /* Slightly smaller icons */
+  }
+
+  /* Ensure close button is visible and accessible */
+  .blog-modal .close {
+    top: 15px;
+    left: 15px; /* Adjust position for better visibility */
+    font-size: 20px; /* Reduce size on mobile */
+  }
+}
+
+/* Ensuring the blog item container uses the available width */
+.blog-item {
+  max-width: 100%; /* Use full width available */
+  box-sizing: border-box; /* Include padding and borders in width */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Blog Content and Banner Box Adjustments */
+.blog-banner-box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blog-content {
+  padding: 10px;
+}
+
+/* Styled Scrollbar for Content Overflow */
+.modal-contents::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-contents::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.modal-contents::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.modal-contents::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
 
