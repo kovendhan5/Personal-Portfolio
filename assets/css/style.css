@@ -328,7 +328,7 @@ main {
  @media screen and (max-width: 400px) {
             .social-list1 {
                 flex-direction: row; /* Change layout to column for better visibility */
-                gap: 10px; /* Adjust gap for smaller screens */
+                gap: 9px; /* Adjust gap for smaller screens */
                 padding-left: 0; /* Adjust padding for smaller screens */
             }
         }
