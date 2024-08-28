@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Kovendhan</h1>
+<h1 align="center">Hi there 👋, I'm Kovendhan</h1>
 <h3 align="center">🌟 Passionate about Cloud Computing, DevOps, and Cyber Security 🌟</h3><h4 align="center">
 Hi there! I'm Kovendhan P, a dedicated learner with a strong focus on mastering Cloud Computing and DevOps, followed by Cyber Security, and then Full Stack Development. Currently pursuing my B.Tech, I'm driven by a relentless curiosity to explore the latest trends and technologies shaping the digital landscape.</h4>
 
@@ -30,12 +30,9 @@ Hi there! I'm Kovendhan P, a dedicated learner with a strong focus on mastering 
 
 [![](https://visitcount.itsvg.in/api?id=kovendhan5&icon=0&color=12)](https://visitcount.itsvg.in)
 
-
 ![](https://github-readme-stats.vercel.app/api?username=kovendhan5&theme=rose_pine&hide_border=true&include_all_commits=false&count_private=false)<br/>
 ![](https://github-readme-streak-stats.herokuapp.com/?user=kovendhan5&theme=rose_pine&hide_border=true)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=kovendhan5&theme=rose_pine&hide_border=true&include_all_commits=false&count_private=false&layout=compact)
-
-
 
 <!---
 kovendhan5/kovendhan5 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
